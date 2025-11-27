@@ -3,8 +3,10 @@ module "minikube" {
 
   aws_region    = "us-east-1"
   cluster_name  = "roboshop-1"
+  #key_name      =  "roboshop-1"
   aws_instance_type = "t3.medium"
-  ssh_public_key = "/c/Users/DELL/munni.pub"
+  #ssh_public_key = "${path.module}/munni.pub"
+
 
   aws_subnet_id = "subnet-0efb935738860f410" #replace your default subnet id
   # by default centos7 will be used
